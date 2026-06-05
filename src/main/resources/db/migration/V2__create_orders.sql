@@ -8,3 +8,6 @@ CREATE TABLE orders (
     status           VARCHAR(50) NOT NULL DEFAULT 'CONFIRMED',
     created_at       TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+CREATE INDEX idx_orders_user_id ON orders(user_id);
+CREATE INDEX idx_orders_idempotency_key ON orders(idempotency_key);
