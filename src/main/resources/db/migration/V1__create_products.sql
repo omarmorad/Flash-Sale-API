@@ -9,7 +9,7 @@ CREATE TABLE products(
 
     sale_start TIMESTAMP NOT NULL, --why have we addd this is beacuse wanna represent the active timeframe for a product flash sale pricin
     sale_end TIMESTAMP NOT NULL, --so if its larger than this end the product is now not eligiible for that specifc sale_price
-    
+    --the why ??I used pessimistic locking as the primary strategy because flash sales are a worstcase scenario for optimistic locking  contention is guaranteed, not rare. The @Version column is a fallback safety net in case of edge cases, not the main concurrency mechanism
     version BIGINT NOT NULL DEFAULT 0,
 
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
