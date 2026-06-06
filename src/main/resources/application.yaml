@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/flashsale
+    url: jdbc:postgresql://localhost:5433/flashsale
     username: postgres
     password: postgres
   jpa:
