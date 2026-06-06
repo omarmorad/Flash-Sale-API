@@ -13,7 +13,7 @@ CREATE TABLE products(
     version BIGINT NOT NULL DEFAULT 0,-- here we are just flagging ..did anyone just saved between my read and my  save, the versions don't match and my save here in thiscase is rejected
 
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 
     /*
     FIRST OPTIMISTIC
