@@ -26,8 +26,8 @@ public class Order {
     @Column(nullable = false)
     private Integer quantity;
 
-    @Column(name = "purchase_price", nullable = false)
-    private Decimal purchasePrice;
+    @Column(name = "purchase_price", nullable = false, precision = 10, scale = 2)
+    private BigDecimal purchasePrice;
 
     @Column(nullable = false)
     private String status;  // CONFIRMED, CANCELLED, etc.
